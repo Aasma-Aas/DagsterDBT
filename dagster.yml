@@ -1,0 +1,4 @@
+locations:
+  - location_name: dagsterdbt
+    code_source:
+      python_file: definitions.py
