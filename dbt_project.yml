@@ -1,0 +1,33 @@
+name: 'analytics'
+version: 0.1.0
+
+require-dbt-version: ">=0.18.0"
+config-version: 2
+
+# Configure database connection profile for dbt to use
+profile: '{profile}'
+
+# Set paths for dbt objects
+analysis-paths: ["analysis"]
+data-paths: ["data"]
+macro-paths: ["macros"]
+source-paths: ["models"]
+snapshot-paths: ["snapshots"]
+test-paths: ["tests"]
+
+log-path: "logs"
+modules-path: "dbt_modules"
+target-path: "target"
+clean-targets:
+    - "dbt_modules"
+    - "target"
+
+
+# DBT MODELS
+models:
+    analytics:
+        staging:
+            +enabled: true
+            +schema: intermediate
+
+
