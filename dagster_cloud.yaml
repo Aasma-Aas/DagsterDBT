@@ -1,0 +1,6 @@
+locations:
+- build:
+    directory: ./pipelines
+  code_source:
+    module_name: pipelines.definitions
+  location_name: pipelines
